@@ -1,0 +1,82 @@
+main{
+    .container{
+        padding: 2.75rem 1.75rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.75rem;
+
+        h2{
+            font-size: 1.65rem;
+            color: var(--very-dark-blue);
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        p{
+            color: var(--dark-grayish);
+            font-size: 0.9rem;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+
+        a{
+            width:6.5rem;
+            margin: 0 auto;
+            display: inline;
+
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Fraunces';
+            font-size: 0.85rem;
+            color:var(--very-dark-blue);
+            border-bottom: solid ;
+           
+        }
+    }
+
+    .section-main{
+        img{
+            width: 100%;
+        }
+
+    }
+        
+    .section-secondary{
+        background-image: url('../../assets/mobile/image-graphic-design.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        
+
+        .container{
+            
+            h2{
+                margin-top: 17.25rem;
+                font-size: 1.25rem;
+                color: var(--dark-cyan-text);
+                
+            }
+
+            p{
+                font-size:0.8rem;
+                color: var(--dark-cyan-text);
+            }
+        }
+    }
+
+    .section-secondary.orange{
+        background-image: url('../../assets/mobile/image-photography.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        h2, p{
+            color: var(--dark-blue-text);
+                
+        }
+
+    }
+
+    
+}

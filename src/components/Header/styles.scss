@@ -1,0 +1,137 @@
+header{
+    background-image: url('../../assets/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:500px;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+        
+
+    nav{
+        position: fixed;
+        margin: 0 auto;
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        max-width: 1000px;
+        padding: 0 5% 0 5%;
+        
+        .logo{
+            display:inline-flex;
+            align-items: center;
+            column-gap: .5rem;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover{
+                filter: brightness(0.8);
+            }
+
+        }
+
+        .triangle{
+            margin-top: -1.5rem;
+            top: 0;
+            right: 0;
+            position: absolute;
+            width: 0;
+            height:0;
+            border-bottom: 1.75rem solid var(--white);
+            border-left: 1.75rem solid transparent;
+        }
+
+        ul{
+            display:flex;
+            flex-direction: column;
+            row-gap: 1.75rem;
+            align-items: center;
+
+            li{
+                list-style-type: none;
+
+                a{
+                    text-decoration: none ;
+                    color: var(--dark-grayish);
+                    transition: filter .3s;
+                    
+                    &:hover{
+                        filter: brightness(0.8)
+                    }
+                }
+            }
+
+            :last-child{
+                a{
+                    font-family: 'Fraunces';
+                    font-size: 0.75rem;
+                    color: #000;
+                    text-transform: uppercase;
+                    background:var(--yellow);
+                    padding: 0.75rem 1.25rem;
+                    border-radius: 1.5rem;
+                }
+            }
+        }
+        
+        .toggle{
+            display:inline-flex;
+            cursor: pointer;
+        }
+
+    }
+    
+
+
+    :last-child{
+        display:flex;
+        flex-direction: column;
+        
+        align-items: center;
+
+        h1{
+            display: inline-block;
+            width:100%;
+            margin-top: 6.75rem;
+            text-align: center;
+            font-size: 2.25rem;
+            color: var(--white);
+        }
+
+        img{
+            margin:1.25rem;
+            width:2.5rem;
+        }
+    }
+
+
+    
+    
+}
+
+
+@media screen and(max-width: 767px) {
+    .nav__menu{
+        
+        position: fixed;
+        background-color: var(--white);
+        width: 90%;
+        height:300px;
+        top:-100%;
+        right: 0;
+        margin:100px 5% 0 auto;
+
+        padding: 3rem 0 ;
+        transition: 0.5s;
+        z-index: 100;
+       
+
+    }
+
+
+}
