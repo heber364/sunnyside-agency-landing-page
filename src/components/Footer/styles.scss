@@ -20,9 +20,14 @@ footer{
         justify-content: space-between;
 
         li{
-            color:var(--dark-cyan-footer);
             list-style-type: none;
-            
+
+            a{
+                color:var(--dark-cyan-footer);
+                text-decoration: none;
+            }
+
+
         }
     }
 

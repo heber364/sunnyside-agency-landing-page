@@ -9,9 +9,9 @@ export function Footer(){
         <footer>
             <h3>sunnyside</h3>
             <ul>
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
+                <li><a href="#">About</a> </li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
             </ul>
             <ul className="icons">
                 <li><a href="#"><img src={facebookIcon} alt="Facebook link" /></a></li>

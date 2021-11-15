@@ -4,12 +4,17 @@ main{
         display: flex;
         flex-direction: column;
         row-gap: 1.75rem;
+        align-items: center;
+        justify-content: center;
+
+        h2,p,a{
+            max-width: 500px;
+        }
 
         h2{
             font-size: 1.65rem;
             color: var(--very-dark-blue);
             text-align: center;
-            padding: 0 1rem;
         }
 
         p{
@@ -17,13 +22,12 @@ main{
             font-size: 0.9rem;
             text-align: center;
             line-height: 1.5rem;
+            max-width: 500px;
         }
 
-        a{
+        a{  
             width:6.5rem;
-            margin: 0 auto;
-            display: inline;
-
+            margin-left: 0;
             text-align: center;
             text-decoration: none;
             font-family: 'Fraunces';
@@ -42,15 +46,10 @@ main{
     }
         
     .section-secondary{
-        background-image: url('../../assets/mobile/image-graphic-design.jpg');
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: 100%;
-
-        
+        display:flex;
+        flex-direction: column;
 
         .container{
-            
             h2{
                 margin-top: 17.25rem;
                 font-size: 1.25rem;
@@ -63,20 +62,91 @@ main{
                 color: var(--dark-cyan-text);
             }
         }
-    }
 
-    .section-secondary.orange{
-        background-image: url('../../assets/mobile/image-photography.jpg');
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: 100%;
-
-        h2, p{
-            color: var(--dark-blue-text);
-                
+        #acerola, #orange{
+           
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
+        #acerola{
+            background-image: url('../../assets/mobile/image-graphic-design.jpg');
+        }
+        #orange{
+            background-image: url('../../assets/mobile/image-photography.jpg');
+
+           
+            h2, p{
+                color: var(--dark-blue-text);
+                    
+            }
+    
+        }
     }
+    
+}
+
+@media screen and(min-width: 767px) {
+    main{
+        .section-main, .section-secondary{
+           display:grid;
+           grid-template-columns: 1fr 1fr;
+
+            #acerola, #orange{
+                background-size: cover;
+            }
+
+            #acerola{
+                background-image: url('../../assets/desktop/image-graphic-design.jpg');
+            }
+            
+            #orange{
+                background-image: url('../../assets/desktop/image-photography.jpg');
+        
+            }
+        
+        }
+
+        #ovo{
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "coluna1 coluna2";
+
+            img{
+                grid-area: coluna2;
+            }
+
+            div{
+                grid-area: coluna1;
+                h2{
+                    text-align: left;
+                }
+            }
+            
+        }
+      
+        
+        .section-secondary{   
+            .container{
+                h2,p,a{
+                    max-width: 325px;
+                }
+            }           
+        
+        }
 
     
+    }
+    #content{
+        a{
+            border:none;
+        }
+        h2,p,a{
+            width: 100%;
+            text-align: left;
+            margin-left: 0;
+        }
+    }
+
+
 }

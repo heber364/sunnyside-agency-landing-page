@@ -1,12 +1,22 @@
 .section-members{
-    padding: 4rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    row-gap: 4rem;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    .list-members{
+        >:first-child{
+            margin-top:4rem;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        row-gap: 6rem;
+    }
 
     h2{
+        text-align: center;
         color: var(--grayish);
         font-weight: 600;
         font-size:0.95rem;
@@ -17,8 +27,9 @@
     .member{
         display: flex;
         flex-direction: column;
-        row-gap: 2.75rem;
+        row-gap: 2rem;
         align-items: center;
+        max-width: 500px;
 
         img{
             width: 5rem;
@@ -45,8 +56,59 @@
                 font-size: 0.85rem;
                 font-family: 'Barlow';
                 color: var(--grayish);
+                font-weight: 600;
             }
         }
     }
 
+}
+
+@media screen and(min-width: 767px){
+    .section-members{
+        .list-members{
+            flex-direction:row;
+            margin-top: 3rem;
+            column-gap: 3rem;
+            align-items: center;
+            >:first-child{
+                margin-top: 0;
+            }
+        }
+    
+        .member{
+            flex-direction: column;
+            row-gap: 2.75rem;
+
+
+            img{
+                width: 3rem;
+            }
+    
+            p{  
+                font-size: 0.75rem;
+                line-height: 1.25rem;
+            }
+    
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap:0.5rem;
+
+                :first-child{
+                    font-size: 0.95rem;
+                    color: var(--very-dark-blue)
+                }
+    
+                :last-child{
+                    font-size: 0.75rem;
+                    font-family: 'Barlow';
+                    color: var(--grayish);
+
+                }
+            }
+        }
+    
+    }
+    
 }
